@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANBS Stories - Real Stories of Hope & Life-Saving Blood Donations | South African National Blood Service</title>
+  <meta name="description" content="Read inspiring stories of hope from SANBS. Real accounts of how blood donations save lives across South Africa. Share your story or become a donor today.">
+  <meta name="keywords" content="SANBS stories, blood donation stories, life-saving donations, South Africa, hope stories, donor experiences">
+  <meta name="author" content="South African National Blood Service">
+  <link rel="stylesheet" href="stylesheet.css">
+  <style>
+    /* CSS Variables for consistent theming */
+    :root {
+      --primary-red: #d32f2f;
+      --dark-red: #b71c1c;
+      --light-red: #ffcdd2;
+      --white: #ffffff;
+      --light-gray: #f5f5f5;
+      --dark-gray: #424242;
+      --medium-gray: #757575;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: var(--light-gray);
+    }
+    
+    header {
+      background-color: var(--primary-red);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    nav {
+      background-color: var(--dark-red);
+      padding: 15px 0;
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    nav li {
+      margin: 0 15px;
+    }
+    
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1, h2, h3 {
+      color: var(--dark-red);
+      margin-bottom: 15px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--light-red);
+      padding-bottom: 10px;
+    }
+    
+    p {
+      margin-bottom: 15px;
+    }
+    
+    footer {
+      background-color: var(--primary-red);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    footer a {
+      color: var(--light-red);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Article Styles */
+    article {
+      margin-bottom: 40px;
+      padding: 25px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .article-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    
+    .article-meta {
+      color: var(--medium-gray);
+      font-size: 0.9rem;
+    }
+    
+    .article-image {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 15px 0;
+      display: block;
+    }
+    
+    .article-content {
+      position: relative;
+    }
+    
+    .read-more {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--primary-red);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .full-story {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    
+    .full-story.expanded {
+      max-height: 1000px;
+    }
+    
+    /* Form Styles */
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-red);
+      box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+    }
+    
+    .error {
+      color: var(--primary-red);
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+    
+    button {
+      background-color: var(--primary-red);
+      color: var(--white);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: var(--dark-red);
+    }
+    
+    /* Interactive Elements */
+    .story-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    
+    .filter-button {
+      background-color: var(--white);
+      color: var(--dark-gray);
+      border: 1px solid var(--medium-gray);
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .filter-button.active {
+      background-color: var(--primary-red);
+      color: var(--white);
+      border-color: var(--primary-red);
+    }
+    
+    .search-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .search-box {
+      padding: 10px;
+      width: 70%;
+      max-width: 400px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .search-button {
+      padding: 10px 20px;
+      background-color: var(--primary-red);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .highlight {
+      background-color: yellow;
+    }
+    
+    .story-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .action-button {
+      background: none;
+      border: none;
+      color: var(--medium-gray);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s;
+    }
+    
+    .action-button:hover {
+      color: var(--primary-red);
+    }
+    
+    .action-button.liked {
+      color: var(--primary-red);
+    }
+    
+    .share-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .share-modal-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 90%;
+    }
+    
+    .share-options {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+      justify-content: center;
+    }
+    
+    .share-option {
+      background-color: var(--light-gray);
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .share-option:hover {
+      background-color: var(--light-red);
+    }
+    
+    /* Testimonial Carousel */
+    .testimonial-carousel {
+      position: relative;
+      margin: 30px 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    
+    .carousel-container {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .carousel-slide {
+      min-width: 100%;
+      padding: 30px;
+      background-color: var(--light-red);
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--medium-gray);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .carousel-dot.active {
+      background-color: var(--primary-red);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav li {
+        margin: 5px 0;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .article-header {
+        flex-direction: column;
+      }
+      
+      .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      .story-actions {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><u>Stories of Hope: How SANBS Saves Lives</u></h1>
+    <p>Real stories from communities across South Africa.</p>
+  </header>
+
+  <nav>
+    <div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="enquiry.html">Enquiries</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Story Submission Form -->
+    <section>
+      <h2>Share Your Story</h2>
+      <p>Have you or someone you know been impacted by blood donation? Share your story to inspire others.</p>
+      <div class="form-container">
+        <form id="storyForm">
+          <div class="form-group">
+            <label for="storyName">Your Name</label>
+            <input type="text" id="storyName" name="storyName" required>
+            <div class="error" id="storyNameError">Please enter your name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="storyEmail">Email Address</label>
+            <input type="email" id="storyEmail" name="storyEmail" required>
+            <div class="error" id="storyEmailError">Please enter a valid email address</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="storyType">Story Type</label>
+            <select id="storyType" name="storyType" required>
+              <option value="">Select a category</option>
+              <option value="donor">Donor Experience</option>
+              <option value="recipient">Recipient Story</option>
+              <option value="volunteer">Volunteer Experience</option>
+              <option value="family">Family Member</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="error" id="storyTypeError">Please select a story type</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="storyTitle">Story Title</label>
+            <input type="text" id="storyTitle" name="storyTitle" required>
+            <div class="error" id="storyTitleError">Please enter a story title</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="storyContent">Your Story</label>
+            <textarea id="storyContent" name="storyContent" rows="6" required></textarea>
+            <div class="error" id="storyContentError">Please share your story</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="storyConsent">
+              <input type="checkbox" id="storyConsent" name="storyConsent" required>
+              I give SANBS permission to share my story (anonymously if preferred)
+            </label>
+            <div class="error" id="storyConsentError">Please provide consent to share your story</div>
+          </div>
+          
+          <button type="submit">Submit Your Story</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Story Search and Filters -->
+    <section>
+      <h2>Browse Stories</h2>
+      <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Search stories...">
+        <button id="searchButton" class="search-button">Search</button>
+        <button id="clearSearch" class="search-button" style="display:none;">Clear Search</button>
+      </div>
+      
+      <div class="story-filters">
+        <button class="filter-button active" data-filter="all">All Stories</button>
+        <button class="filter-button" data-filter="donor">Donor Stories</button>
+        <button class="filter-button" data-filter="recipient">Recipient Stories</button>
+        <button class="filter-button" data-filter="volunteer">Volunteer Stories</button>
+        <button class="filter-button" data-filter="emergency">Emergency Response</button>
+      </div>
+    </section>
+    
+    <!-- Testimonial Carousel -->
+    <section>
+      <h2>Inspiring Testimonials</h2>
+      <div class="testimonial-carousel">
+        <div class="carousel-container" id="carouselContainer">
+          <div class="carousel-slide">
+            <h3>"Blood Donation Saved My Daughter's Life"</h3>
+            <p>"When my daughter needed emergency surgery after an accident, SANBS provided the blood that saved her life. We are forever grateful to the anonymous donors who made this possible."</p>
+            <p><strong>- Sarah M., Johannesburg</strong></p>
+          </div>
+          <div class="carousel-slide">
+            <h3>"A Regular Donor's Perspective"</h3>
+            <p>"I've been donating blood for 15 years. It's a simple act that takes little time but can make a huge difference. Knowing I've helped save lives is the most rewarding feeling."</p>
+            <p><strong>- David T., Cape Town</strong></p>
+          </div>
+          <div class="carousel-slide">
+            <h3>"From Recipient to Donor"</h3>
+            <p>"After receiving blood during my cancer treatment, I vowed to become a donor myself once I recovered. Now I donate regularly to pay forward the gift I received."</p>
+            <p><strong>- Michaela R., Durban</strong></p>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <div class="carousel-dot active" data-slide="0"></div>
+          <div class="carousel-dot" data-slide="1"></div>
+          <div class="carousel-dot" data-slide="2"></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Stories Section -->
+    <section id="storiesSection">
+      <h2>Stories of Hope</h2>
+      
+      <!-- Article 1 -->
+      <article data-category="recipient emergency">
+        <div class="article-header">
+          <h3>Life Saved Through a Single Donation</h3>
+          <div class="article-meta">Published: March 15, 2024 | Category: Recipient Story</div>
+        </div>
+        <div class="article-content">
+          <img src="_images/donor.png" alt="Blood donor smiling" class="article-image">
+          <p>
+            When a young accident victim needed urgent blood, SANBS was there. 
+            Thanks to the selfless donation of volunteers, doctors had the blood supply they needed for emergency surgery.
+          </p>
+          <p>
+            One pint of blood helped restore a life, reminding us that every donor is a hero in disguise.
+          </p>
+          <div class="full-story">
+            <p>
+              The accident happened on a rainy Friday evening. A 19-year-old student was rushed to the hospital with severe internal bleeding. 
+              Without immediate access to O-negative blood, his chances of survival were slim.
+            </p>
+            <p>
+              Thanks to SANBS's well-stocked blood bank and efficient distribution system, the hospital received the needed blood units within minutes. 
+              The surgery was successful, and the young man made a full recovery.
+            </p>
+            <p>
+              "I wouldn't be here today if it weren't for blood donors," he said during his recovery. 
+              "I've now registered to become a donor myself once I'm eligible."
+            </p>
+          </div>
+          <div class="read-more">Read Full Story</div>
+          <div class="story-actions">
+            <button class="action-button like-button" data-article="1">
+              <span class="like-icon">❤</span> <span class="like-count">42</span> Likes
+            </button>
+            <button class="action-button share-button" data-article="1">
+              <span class="share-icon">↗</span> Share
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article data-category="recipient">
+        <div class="article-header">
+          <h3>Supporting Cancer Patients with Platelet Donations</h3>
+          <div class="article-meta">Published: February 28, 2024 | Category: Recipient Story</div>
+        </div>
+        <div class="article-content">
+          <img src="_images/platelet.jpg" alt="Doctor holding blood platelets" class="article-image">
+          <p>
+            Many cancer patients depend on platelet transfusions during treatment. 
+            SANBS's specialized apheresis donations have brought hope to children battling leukemia and other blood disorders.
+          </p>
+          <p>
+            Without these donations, countless patients would face greater risks during chemotherapy.
+          </p>
+          <div class="full-story">
+            <p>
+              Little Lindiwe was diagnosed with leukemia just after her fifth birthday. 
+              Her treatment required regular platelet transfusions to prevent bleeding complications.
+            </p>
+            <p>
+              "The platelet donations were crucial for Lindiwe's survival," explained her oncologist. 
+              "During chemotherapy, her platelet count would drop dangerously low. Without these transfusions, we couldn't continue treatment."
+            </p>
+            <p>
+              After six months of treatment, Lindiwe went into remission. Her family now organizes platelet donation drives in their community, 
+              encouraging others to support cancer patients in need.
+            </p>
+          </div>
+          <div class="read-more">Read Full Story</div>
+          <div class="story-actions">
+            <button class="action-button like-button" data-article="2">
+              <span class="like-icon">❤</span> <span class="like-count">37</span> Likes
+            </button>
+            <button class="action-button share-button" data-article="2">
+              <span class="share-icon">↗</span> Share
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article data-category="emergency volunteer">
+        <div class="article-header">
+          <h3>Disaster Response: Rising to the Challenge</h3>
+          <div class="article-meta">Published: January 12, 2024 | Category: Emergency Response</div>
+        </div>
+        <div class="article-content">
+          <img src="_images/emergency.jpeg" alt="Emergency blood delivery" class="article-image">
+          <p>
+            When natural disasters and accidents strike, SANBS responds rapidly. 
+            Teams coordinate emergency blood collections and nationwide logistics to ensure that hospitals never run out in critical moments.
+          </p>
+          <p>
+            Communities across South Africa have seen firsthand how preparedness and dedication save lives.
+          </p>
+          <div class="full-story">
+            <p>
+              When a major bus accident left dozens injured on the N1 highway, SANBS's emergency response team sprang into action.
+            </p>
+            <p>
+              "We received the alert at 3:15 PM," recalled the SANBS regional manager. 
+              "Within 30 minutes, we had mobilized additional staff, alerted our regular donors, and dispatched emergency blood supplies to three different hospitals."
+            </p>
+            <p>
+              The coordinated effort ensured that all 27 accident victims received the blood products they needed. 
+              SANBS's disaster response protocol, refined over years of experience, made this life-saving operation possible.
+            </p>
+          </div>
+          <div class="read-more">Read Full Story</div>
+          <div class="story-actions">
+            <button class="action-button like-button" data-article="3">
+              <span class="like-icon">❤</span> <span class="like-count">29</span> Likes
+            </button>
+            <button class="action-button share-button" data-article="3">
+              <span class="share-icon">↗</span> Share
+            </button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Article 4 - New story added through form submission -->
+      <article data-category="donor" id="userStory" style="display: none;">
+        <div class="article-header">
+          <h3 id="userStoryTitle"></h3>
+          <div class="article-meta" id="userStoryMeta"></div>
+        </div>
+        <div class="article-content">
+          <p id="userStoryContent"></p>
+          <div class="story-actions">
+            <button class="action-button like-button" data-article="4">
+              <span class="like-icon">❤</span> <span class="like-count">0</span> Likes
+            </button>
+            <button class="action-button share-button" data-article="4">
+              <span class="share-icon">↗</span> Share
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Share Modal -->
+  <div id="shareModal" class="share-modal">
+    <div class="share-modal-content">
+      <h3>Share This Story</h3>
+      <p>Help spread hope by sharing this inspiring story.</p>
+      <div class="share-options">
+        <div class="share-option" data-platform="facebook">Facebook</div>
+        <div class="share-option" data-platform="twitter">Twitter</div>
+        <div class="share-option" data-platform="whatsapp">WhatsApp</div>
+        <div class="share-option" data-platform="email">Email</div>
+      </div>
+      <button id="closeShareModal">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SANBS — Stories of hope made possible by blood donors.</p>
+  </footer>
+
+  <script>
+    // DOM Manipulation and Interactive Features
+    document.addEventListener('DOMContentLoaded', function() {
+      // Story Form Validation
+      const storyForm = document.getElementById('storyForm');
+      
+      storyForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Reset previous errors
+        clearErrors();
+        
+        // Validate form fields
+        let isValid = true;
+        
+        // Name validation
+        const storyName = document.getElementById('storyName').value.trim();
+        if (storyName === '') {
+          showError('storyNameError', 'Please enter your name');
+          isValid = false;
+        }
+        
+        // Email validation
+        const storyEmail = document.getElementById('storyEmail').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (storyEmail === '') {
+          showError('storyEmailError', 'Please enter your email address');
+          isValid = false;
+        } else if (!emailRegex.test(storyEmail)) {
+          showError('storyEmailError', 'Please enter a valid email address');
+          isValid = false;
+        }
+        
+        // Story type validation
+        const storyType = document.getElementById('storyType').value;
+        if (storyType === '') {
+          showError('storyTypeError', 'Please select a story type');
+          isValid = false;
+        }
+        
+        // Story title validation
+        const storyTitle = document.getElementById('storyTitle').value.trim();
+        if (storyTitle === '') {
+          showError('storyTitleError', 'Please enter a story title');
+          isValid = false;
+        }
+        
+        // Story content validation
+        const storyContent = document.getElementById('storyContent').value.trim();
+        if (storyContent === '') {
+          showError('storyContentError', 'Please share your story');
+          isValid = false;
+        } else if (storyContent.length < 50) {
+          showError('storyContentError', 'Please provide more details in your story (at least 50 characters)');
+          isValid = false;
+        }
+        
+        // Consent validation
+        const storyConsent = document.getElementById('storyConsent').checked;
+        if (!storyConsent) {
+          showError('storyConsentError', 'Please provide consent to share your story');
+          isValid = false;
+        }
+        
+        // If form is valid, process submission
+        if (isValid) {
+          // In a real application, this would send data to a server
+          // For demonstration, we'll add the story to the page
+          addUserStory(storyName, storyType, storyTitle, storyContent);
+          
+          alert('Thank you for sharing your story! It has been submitted for review.');
+          storyForm.reset();
+        }
+      });
+      
+      function addUserStory(name, type, title, content) {
+        const userStory = document.getElementById('userStory');
+        const userStoryTitle = document.getElementById('userStoryTitle');
+        const userStoryMeta = document.getElementById('userStoryMeta');
+        const userStoryContent = document.getElementById('userStoryContent');
+        
+        // Set story content
+        userStoryTitle.textContent = title;
+        userStoryMeta.textContent = `Published: ${new Date().toLocaleDateString()} | Category: ${getCategoryName(type)}`;
+        userStoryContent.textContent = content;
+        
+        // Set category for filtering
+        userStory.setAttribute('data-category', type);
+        
+        // Show the story
+        userStory.style.display = 'block';
+        
+        // Scroll to the new story
+        userStory.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      function getCategoryName(type) {
+        const categories = {
+          'donor': 'Donor Story',
+          'recipient': 'Recipient Story',
+          'volunteer': 'Volunteer Story',
+          'family': 'Family Member',
+          'other': 'Other'
+        };
+        return categories[type] || 'Story';
+      }
+      
+      // Story Filtering
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const articles = document.querySelectorAll('article');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter articles
+          articles.forEach(article => {
+            if (filter === 'all' || article.getAttribute('data-category').includes(filter)) {
+              article.style.display = 'block';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Read More Functionality
+      const readMoreButtons = document.querySelectorAll('.read-more');
+      
+      readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const fullStory = this.previousElementSibling;
+          const isExpanded = fullStory.classList.contains('expanded');
+          
+          if (isExpanded) {
+            fullStory.classList.remove('expanded');
+            this.textContent = 'Read Full Story';
+          } else {
+            fullStory.classList.add('expanded');
+            this.textContent = 'Show Less';
+          }
+        });
+      });
+      
+      // Like Functionality
+      const likeButtons = document.querySelectorAll('.like-button');
+      
+      likeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const likeCount = this.querySelector('.like-count');
+          let count = parseInt(likeCount.textContent);
+          
+          if (this.classList.contains('liked')) {
+            count--;
+            this.classList.remove('liked');
+          } else {
+            count++;
+            this.classList.add('liked');
+          }
+          
+          likeCount.textContent = count;
+        });
+      });
+      
+      // Share Functionality
+      const shareButtons = document.querySelectorAll('.share-button');
+      const shareModal = document.getElementById('shareModal');
+      const closeShareModal = document.getElementById('closeShareModal');
+      let currentArticle = null;
+      
+      shareButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          currentArticle = this.getAttribute('data-article');
+          shareModal.style.display = 'flex';
+        });
+      });
+      
+      closeShareModal.addEventListener('click', function() {
+        shareModal.style.display = 'none';
+      });
+      
+      // Share options
+      const shareOptions = document.querySelectorAll('.share-option');
+      
+      shareOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          const platform = this.getAttribute('data-platform');
+          const articleTitle = document.querySelector(`[data-article="${currentArticle}"]`).closest('article').querySelector('h3').textContent;
+          const shareUrl = window.location.href;
+          const shareText = `Check out this inspiring story from SANBS: ${articleTitle}`;
+          
+          let shareLink = '';
+          
+          switch(platform) {
+            case 'facebook':
+              shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+              break;
+            case 'twitter':
+              shareLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+              break;
+            case 'whatsapp':
+              shareLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+              break;
+            case 'email':
+              shareLink = `mailto:?subject=${encodeURIComponent(articleTitle)}&body=${encodeURIComponent(shareText + '\n\n' + shareUrl)}`;
+              break;
+          }
+          
+          window.open(shareLink, '_blank');
+          shareModal.style.display = 'none';
+        });
+      });
+      
+      // Search Functionality
+      const searchInput = document.getElementById('searchInput');
+      const searchButton = document.getElementById('searchButton');
+      const clearSearchButton = document.getElementById('clearSearch');
+      
+      searchButton.addEventListener('click', performSearch);
+      searchInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+          performSearch();
+        }
+      });
+      
+      function performSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        
+        if (searchTerm === '') {
+          return;
+        }
+        
+        // Remove previous highlights
+        removeHighlights();
+        
+        // Search through articles
+        let foundResults = false;
+        articles.forEach(article => {
+          const title = article.querySelector('h3').textContent.toLowerCase();
+          const content = article.textContent.toLowerCase();
+          
+          if (title.includes(searchTerm) || content.includes(searchTerm)) {
+            // Highlight matching text in title
+            const titleElement = article.querySelector('h3');
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            titleElement.innerHTML = titleElement.textContent.replace(regex, '<span class="highlight">$1</span>');
+            
+            article.style.display = 'block';
+            foundResults = true;
+          } else {
+            article.style.display = 'none';
+          }
+        });
+        
+        // Show message if no results found
+        if (!foundResults) {
+          alert('No stories found matching your search.');
+        }
+        
+        // Show clear search button
+        clearSearchButton.style.display = 'inline-block';
+      }
+      
+      clearSearchButton.addEventListener('click', function() {
+        searchInput.value = '';
+        removeHighlights();
+        this.style.display = 'none';
+        
+        // Show all articles
+        articles.forEach(article => {
+          article.style.display = 'block';
+        });
+      });
+      
+      function removeHighlights() {
+        const highlights = document.querySelectorAll('.highlight');
+        highlights.forEach(highlight => {
+          const parent = highlight.parentNode;
+          parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+          parent.normalize();
+        });
+      }
+      
+      // Testimonial Carousel
+      const carouselContainer = document.getElementById('carouselContainer');
+      const carouselDots = document.querySelectorAll('.carousel-dot');
+      let currentSlide = 0;
+      
+      function showSlide(index) {
+        carouselContainer.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Update active dot
+        carouselDots.forEach(dot => dot.classList.remove('active'));
+        carouselDots[index].classList.add('active');
+        
+        currentSlide = index;
+      }
+      
+      // Add click events to dots
+      carouselDots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          const slideIndex = parseInt(this.getAttribute('data-slide'));
+          showSlide(slideIndex);
+        });
+      });
+      
+      // Auto-advance carousel
+      setInterval(() => {
+        let nextSlide = currentSlide + 1;
+        if (nextSlide >= carouselDots.length) {
+          nextSlide = 0;
+        }
+        showSlide(nextSlide);
+      }, 5000);
+      
+      // Utility functions
+      function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+      }
+      
+      function clearErrors() {
+        const errorElements = document.querySelectorAll('.error');
+        errorElements.forEach(element => {
+          element.style.display = 'none';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

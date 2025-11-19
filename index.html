@@ -1,0 +1,988 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANBS Home - South African National Blood Service | Save Lives Through Blood Donation</title>
+    <meta name="description" content="SANBS - South African National Blood Service. Donate blood, save lives. Learn about blood donation, find donor centers, and support our healthcare mission.">
+    <meta name="keywords" content="SANBS, blood donation, South Africa, donate blood, save lives, blood service, healthcare">
+    <meta name="author" content="South African National Blood Service">
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-red: #d32f2f;
+            --dark-red: #fdfdfd;
+            --light-red: #ffcdd2;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #424242;
+            --medium-gray: #757575;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-gray);
+        }
+        
+        header {
+            background-color: var(--primary-red);
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background-color: var(--dark-red);
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2, h3 {
+            color: var(--dark-red);
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--light-red);
+            padding-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background-color: var(--primary-red);
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        footer a {
+            color: var(--light-red);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+        
+        .hero h2 {
+            color: var(--white);
+            border-bottom: none;
+            font-size: 2.2rem;
+        }
+        
+        /* Form Styles */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+        }
+        
+        .error {
+            color: var(--primary-red);
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        button {
+            background-color: var(--primary-red);
+            color: var(--white);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: var(--dark-red);
+        }
+        
+        /* Interactive Elements */
+        .donation-counter {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light-red);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .counter-value {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--dark-red);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            background-color: var(--primary-red);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--dark-red);
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light-red);
+            border-radius: 8px;
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dark-red);
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        
+        .gallery-item {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .news-ticker {
+            background-color: var(--dark-red);
+            color: var(--white);
+            padding: 10px;
+            overflow: hidden;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-content {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                max-width: 100%;
+                margin-top: -80px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><u>South African National Blood Service &trade;</u></h1>
+            <p>Saving Lives Through Blood Donation</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiries</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="_images/donation.jpg" alt="Blood donation process" class="hero-image">
+            <div class="hero-content">
+                <h2>Donate Blood, Save Lives</h2>
+                <p>Your donation can save up to 3 lives. Join us in our mission to ensure a safe and sufficient blood supply for South Africa.</p>
+                <div class="cta-buttons">
+                    <a href="#donation-form" class="cta-button">Become a Donor</a>
+                    <a href="#find-center" class="cta-button">Find a Donor Center</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- News Ticker -->
+        <div class="news-ticker">
+            <div class="ticker-content">
+                <strong>Latest News:</strong> SANBS launches new mobile donation units in rural areas. 
+                World Blood Donor Day celebration on June 14th. 
+                Urgent need for O-negative blood type. 
+                New donor center opening in Johannesburg next month.
+            </div>
+        </div>
+        
+        <!-- Donation Counter -->
+        <section class="donation-counter">
+            <h3>Lives Saved Today</h3>
+            <div class="counter-value" id="donationCounter">0</div>
+            <p>Each blood donation can save up to 3 lives</p>
+        </section>
+        
+        <!-- Statistics Section -->
+        <section>
+            <h2>Our Impact</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-value" id="dailyDonations">0</div>
+                    <div class="stat-label">Daily Donations</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="livesSaved">0</div>
+                    <div class="stat-label">Lives Saved This Month</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="activeDonors">0</div>
+                    <div class="stat-label">Active Donors</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Main Content Section -->
+        <section>
+            <h2>Welcome to SANBS</h2>
+            <p>
+                The South African National Blood Service (SANBS) is a vital non-profit organization dedicated to providing safe, reliable, and sufficient blood and blood products to patients across South Africa.
+                Operating with a mission to save lives, SANBS manages blood collection, testing, storage, and distribution, ensuring that hospitals and clinics have the resources needed for medical treatments, emergencies, and surgeries.
+                By promoting voluntary blood donation and upholding the highest medical and ethical standards, SANBS plays an essential role in strengthening the nation's healthcare system and supporting communities in times of need.
+            </p>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="_images/blood-donation-process.png" alt="Blood donation process">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/SANBS donor centre.jpg" alt="SANBS donor center">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/Blood Donation.jpg" alt="Community blood drive">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Donation Eligibility Checker -->
+        <section>
+            <h2>Check Your Donation Eligibility</h2>
+            <div class="form-container">
+                <form id="eligibilityForm">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="16" max="75" required>
+                        <div class="error" id="ageError">Please enter a valid age between 16 and 75</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" name="weight" min="50" required>
+                        <div class="error" id="weightError">Minimum weight requirement is 50kg</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="health">Are you in good health today?</label>
+                        <select id="health" name="health" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <div class="error" id="healthError">Please select an option</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="medication">Are you currently taking any medication?</label>
+                        <select id="medication" name="medication" required>
+                            <option value="">Select an option</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                        <div class="error" id="medicationError">Please select an option</div>
+                    </div>
+                    
+                    <button type="submit">Check Eligibility</button>
+                </form>
+            </div>
+            <div id="eligibilityResult" style="display: none; margin-top: 20px; padding: 15px; border-radius: 4px;"></div>
+        </section>
+        
+        <!-- Donation Appointment Form -->
+        <section id="donation-form">
+            <h2>Schedule a Donation</h2>
+            <div class="form-container">
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="appointmentName">Full Name</label>
+                        <input type="text" id="appointmentName" name="appointmentName" required>
+                        <div class="error" id="appointmentNameError">Please enter your full name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentEmail">Email Address</label>
+                        <input type="email" id="appointmentEmail" name="appointmentEmail" required>
+                        <div class="error" id="appointmentEmailError">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentPhone">Phone Number</label>
+                        <input type="tel" id="appointmentPhone" name="appointmentPhone" required>
+                        <div class="error" id="appointmentPhoneError">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        <div class="error" id="appointmentDateError">Please select a date</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentLocation">Preferred Location</label>
+                        <select id="appointmentLocation" name="appointmentLocation" required>
+                            <option value="">Select a location</option>
+                            <option value="johannesburg">Johannesburg</option>
+                            <option value="pretoria">Pretoria</option>
+                            <option value="cape-town">Cape Town</option>
+                            <option value="durban">Durban</option>
+                            <option value="port-elizabeth">Port Elizabeth</option>
+                        </select>
+                        <div class="error" id="appointmentLocationError">Please select a location</div>
+                    </div>
+                    
+                    <button type="submit">Schedule Appointment</button>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Emergency Blood Request -->
+        <section id="emergency-request">
+            <h2>Emergency Blood Request</h2>
+            <p>For hospitals and medical facilities with urgent blood requirements</p>
+            <div class="form-container">
+                <form id="emergencyForm">
+                    <div class="form-group">
+                        <label for="facilityName">Facility Name</label>
+                        <input type="text" id="facilityName" name="facilityName" required>
+                        <div class="error" id="facilityNameError">Please enter facility name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="facilityContact">Contact Person</label>
+                        <input type="text" id="facilityContact" name="facilityContact" required>
+                        <div class="error" id="facilityContactError">Please enter contact person</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emergencyPhone">Emergency Contact Number</label>
+                        <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                        <div class="error" id="emergencyPhoneError">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type Required</label>
+                        <select id="bloodType" name="bloodType" required>
+                            <option value="">Select blood type</option>
+                            <option value="O-">O Negative</option>
+                            <option value="O+">O Positive</option>
+                            <option value="A-">A Negative</option>
+                            <option value="A+">A Positive</option>
+                            <option value="B-">B Negative</option>
+                            <option value="B+">B Positive</option>
+                            <option value="AB-">AB Negative</option>
+                            <option value="AB+">AB Positive</option>
+                        </select>
+                        <div class="error" id="bloodTypeError">Please select blood type</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="unitsRequired">Units Required</label>
+                        <input type="number" id="unitsRequired" name="unitsRequired" min="1" required>
+                        <div class="error" id="unitsRequiredError">Please enter number of units required</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" name="urgency" required>
+                            <option value="">Select urgency level</option>
+                            <option value="critical">Critical (Within 1 hour)</option>
+                            <option value="urgent">Urgent (Within 4 hours)</option>
+                            <option value="high">High (Within 24 hours)</option>
+                        </select>
+                        <div class="error" id="urgencyError">Please select urgency level</div>
+                    </div>
+                    
+                    <button type="submit">Submit Emergency Request</button>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Find Center Section -->
+        <section id="find-center">
+            <h2>Find a Donor Center Near You</h2>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="searchLocation">Enter Your Location</label>
+                    <input type="text" id="searchLocation" placeholder="City, suburb or postal code">
+                    <button type="button" id="searchLocationButton" style="margin-top: 10px;">Search Centers</button>
+                </div>
+            </div>
+            <div id="locationResults" style="margin-top: 20px;"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 South African National Blood Service | <a href="https://www.sanbs.org.za">Learn More</a></p>
+    </footer>
+
+    <!-- Emergency Contact Modal -->
+    <div id="emergencyModal" class="modal">
+        <div class="modal-content">
+            <h2>Emergency Contact Information</h2>
+            <p>For immediate assistance with blood requirements:</p>
+            <p><strong>Emergency Hotline:</strong> 0800 11 90 31</p>
+            <p><strong>Available 24/7</strong></p>
+            <button id="closeEmergencyModal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // DOM Manipulation and Interactive Features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize donation counter with animation
+            const counterElement = document.getElementById('donationCounter');
+            let count = 0;
+            const targetCount = 342; // Example number of donations today
+            
+            const counterInterval = setInterval(() => {
+                count += 3; // Increment by 3 to simulate saving 3 lives per donation
+                counterElement.textContent = count;
+                
+                if (count >= targetCount) {
+                    clearInterval(counterInterval);
+                }
+            }, 50);
+            
+            // Initialize statistics with animation
+            const dailyDonationsElement = document.getElementById('dailyDonations');
+            const livesSavedElement = document.getElementById('livesSaved');
+            const activeDonorsElement = document.getElementById('activeDonors');
+            
+            animateValue(dailyDonationsElement, 0, 1250, 2000);
+            animateValue(livesSavedElement, 0, 3750, 2000);
+            animateValue(activeDonorsElement, 0, 85000, 2000);
+            
+            function animateValue(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    element.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString();
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+            
+            // Eligibility Form Validation
+            const eligibilityForm = document.getElementById('eligibilityForm');
+            const eligibilityResult = document.getElementById('eligibilityResult');
+            
+            eligibilityForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Reset previous errors and result
+                clearErrors('eligibility');
+                eligibilityResult.style.display = 'none';
+                
+                // Validate form fields
+                let isValid = true;
+                let isEligible = true;
+                let message = '';
+                
+                // Age validation
+                const age = parseInt(document.getElementById('age').value);
+                if (isNaN(age) || age < 16 || age > 75) {
+                    showError('ageError', 'You must be between 16 and 75 years old to donate');
+                    isValid = false;
+                    isEligible = false;
+                }
+                
+                // Weight validation
+                const weight = parseInt(document.getElementById('weight').value);
+                if (isNaN(weight) || weight < 50) {
+                    showError('weightError', 'You must weigh at least 50kg to donate');
+                    isValid = false;
+                    isEligible = false;
+                }
+                
+                // Health validation
+                const health = document.getElementById('health').value;
+                if (health === '') {
+                    showError('healthError', 'Please indicate if you are in good health');
+                    isValid = false;
+                } else if (health === 'no') {
+                    isEligible = false;
+                    message += 'You must be in good health to donate. ';
+                }
+                
+                // Medication validation
+                const medication = document.getElementById('medication').value;
+                if (medication === '') {
+                    showError('medicationError', 'Please indicate if you are taking any medication');
+                    isValid = false;
+                } else if (medication === 'yes') {
+                    isEligible = false;
+                    message += 'Some medications may prevent donation. Please consult with our staff. ';
+                }
+                
+                // Display result
+                if (isValid) {
+                    eligibilityResult.style.display = 'block';
+                    if (isEligible) {
+                        eligibilityResult.style.backgroundColor = '#d4edda';
+                        eligibilityResult.style.color = '#155724';
+                        eligibilityResult.innerHTML = '<strong>Congratulations!</strong> You appear to be eligible to donate blood. Please visit one of our donor centers for final screening.';
+                    } else {
+                        eligibilityResult.style.backgroundColor = '#f8d7da';
+                        eligibilityResult.style.color = '#721c24';
+                        eligibilityResult.innerHTML = '<strong>Eligibility Concerns:</strong> ' + message + 'Please contact us for more information.';
+                    }
+                }
+            });
+            
+            // Appointment Form Validation
+            const appointmentForm = document.getElementById('appointmentForm');
+            
+            appointmentForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Reset previous errors
+                clearErrors('appointment');
+                
+                // Validate form fields
+                let isValid = true;
+                
+                // Name validation
+                const appointmentName = document.getElementById('appointmentName').value.trim();
+                if (appointmentName === '') {
+                    showError('appointmentNameError', 'Please enter your full name');
+                    isValid = false;
+                }
+                
+                // Email validation
+                const appointmentEmail = document.getElementById('appointmentEmail').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (appointmentEmail === '') {
+                    showError('appointmentEmailError', 'Please enter your email address');
+                    isValid = false;
+                } else if (!emailRegex.test(appointmentEmail)) {
+                    showError('appointmentEmailError', 'Please enter a valid email address');
+                    isValid = false;
+                }
+                
+                // Phone validation
+                const appointmentPhone = document.getElementById('appointmentPhone').value.trim();
+                const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+                if (appointmentPhone === '') {
+                    showError('appointmentPhoneError', 'Please enter your phone number');
+                    isValid = false;
+                } else if (!phoneRegex.test(appointmentPhone)) {
+                    showError('appointmentPhoneError', 'Please enter a valid phone number');
+                    isValid = false;
+                }
+                
+                // Date validation
+                const appointmentDate = document.getElementById('appointmentDate').value;
+                if (appointmentDate === '') {
+                    showError('appointmentDateError', 'Please select a date');
+                    isValid = false;
+                } else {
+                    const selectedDate = new Date(appointmentDate);
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    
+                    if (selectedDate < today) {
+                        showError('appointmentDateError', 'Please select a future date');
+                        isValid = false;
+                    }
+                }
+                
+                // Location validation
+                const appointmentLocation = document.getElementById('appointmentLocation').value;
+                if (appointmentLocation === '') {
+                    showError('appointmentLocationError', 'Please select a location');
+                    isValid = false;
+                }
+                
+                // If form is valid, submit it
+                if (isValid) {
+                    alert('Thank you for scheduling a donation appointment! We will contact you to confirm the details.');
+                    appointmentForm.reset();
+                }
+            });
+            
+            // Emergency Form Validation
+            const emergencyForm = document.getElementById('emergencyForm');
+            
+            emergencyForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Reset previous errors
+                clearErrors('emergency');
+                
+                // Validate form fields
+                let isValid = true;
+                
+                // Facility name validation
+                const facilityName = document.getElementById('facilityName').value.trim();
+                if (facilityName === '') {
+                    showError('facilityNameError', 'Please enter facility name');
+                    isValid = false;
+                }
+                
+                // Contact person validation
+                const facilityContact = document.getElementById('facilityContact').value.trim();
+                if (facilityContact === '') {
+                    showError('facilityContactError', 'Please enter contact person');
+                    isValid = false;
+                }
+                
+                // Emergency phone validation
+                const emergencyPhone = document.getElementById('emergencyPhone').value.trim();
+                const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+                if (emergencyPhone === '') {
+                    showError('emergencyPhoneError', 'Please enter emergency contact number');
+                    isValid = false;
+                } else if (!phoneRegex.test(emergencyPhone)) {
+                    showError('emergencyPhoneError', 'Please enter a valid phone number');
+                    isValid = false;
+                }
+                
+                // Blood type validation
+                const bloodType = document.getElementById('bloodType').value;
+                if (bloodType === '') {
+                    showError('bloodTypeError', 'Please select blood type');
+                    isValid = false;
+                }
+                
+                // Units required validation
+                const unitsRequired = document.getElementById('unitsRequired').value;
+                if (unitsRequired === '' || parseInt(unitsRequired) < 1) {
+                    showError('unitsRequiredError', 'Please enter number of units required');
+                    isValid = false;
+                }
+                
+                // Urgency validation
+                const urgency = document.getElementById('urgency').value;
+                if (urgency === '') {
+                    showError('urgencyError', 'Please select urgency level');
+                    isValid = false;
+                }
+                
+                // If form is valid, submit it
+                if (isValid) {
+                    alert('Emergency request submitted! Our team will contact you immediately.');
+                    emergencyForm.reset();
+                    
+                    // Show emergency contact modal
+                    document.getElementById('emergencyModal').style.display = 'flex';
+                }
+            });
+            
+            // Location Search
+            const searchLocationButton = document.getElementById('searchLocationButton');
+            const locationResults = document.getElementById('locationResults');
+            
+            searchLocationButton.addEventListener('click', function() {
+                const searchLocation = document.getElementById('searchLocation').value.trim();
+                
+                if (searchLocation === '') {
+                    alert('Please enter a location to search');
+                    return;
+                }
+                
+                // In a real application, this would fetch data from a server
+                // For demonstration, we'll use mock data
+                const mockLocations = [
+                    { name: 'Johannesburg Donor Centre', address: '123 Main St, Johannesburg', phone: '011 123 4567', hours: 'Mon-Fri: 8am-5pm' },
+                    { name: 'Pretoria Central', address: '456 Church St, Pretoria', phone: '012 345 6789', hours: 'Mon-Fri: 8am-5pm, Sat: 8am-1pm' },
+                    { name: 'Cape Town Blood Bank', address: '789 Long St, Cape Town', phone: '021 987 6543', hours: 'Mon-Fri: 8am-5pm' }
+                ];
+                
+                // Display results
+                locationResults.innerHTML = '<h3>Donor Centers Near ' + searchLocation + '</h3>';
+                
+                mockLocations.forEach(location => {
+                    const locationElement = document.createElement('div');
+                    locationElement.style.padding = '15px';
+                    locationElement.style.marginBottom = '10px';
+                    locationElement.style.backgroundColor = '#f8f9fa';
+                    locationElement.style.borderRadius = '4px';
+                    
+                    locationElement.innerHTML = `
+                        <h4>${location.name}</h4>
+                        <p><strong>Address:</strong> ${location.address}</p>
+                        <p><strong>Phone:</strong> ${location.phone}</p>
+                        <p><strong>Hours:</strong> ${location.hours}</p>
+                        <button class="cta-button" style="padding: 8px 15px; margin-top: 10px;">Schedule Appointment</button>
+                    `;
+                    
+                    locationResults.appendChild(locationElement);
+                });
+            });
+            
+            // Modal functionality
+            const emergencyModal = document.getElementById('emergencyModal');
+            const closeEmergencyModal = document.getElementById('closeEmergencyModal');
+            
+            closeEmergencyModal.addEventListener('click', function() {
+                emergencyModal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside the content
+            emergencyModal.addEventListener('click', function(event) {
+                if (event.target === emergencyModal) {
+                    emergencyModal.style.display = 'none';
+                }
+            });
+            
+            // Utility functions
+            function showError(elementId, message) {
+                const errorElement = document.getElementById(elementId);
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+            
+            function clearErrors(formType) {
+                const errorElements = document.querySelectorAll('.error');
+                errorElements.forEach(element => {
+                    if (element.id.includes(formType) || formType === 'all') {
+                        element.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

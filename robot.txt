@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# Sensitive Directories
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /staff/
+Disallow: /private/
+Disallow: /secure/
+Disallow: /backup/
+Disallow: /database/
+Disallow: /config/
+
+# Technical Files
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /composer.json
+Disallow: /web.config
+Disallow: /htaccess.txt
+
+# Search Parameters (prevent duplicate content)
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?search=
+Disallow: /*?page=
+
+# File Types (optional - if you want to block these from search)
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+
+# Sitemap Location
+Sitemap: https://www.sanbs.co.za/sitemap.xml
+
+# Crawl rate (be nice to the server)
+Crawl-delay: 1

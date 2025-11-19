@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANBS Contact - South African National Blood Service | Find Donor Centers</title>
+  <meta name="description" content="Find SANBS contact details, locations, and donor centers across South Africa. Get in touch with the South African National Blood Service.">
+  <meta name="keywords" content="SANBS contact, blood donation centers, South Africa, donor locations, blood service contact">
+  <meta name="author" content="South African National Blood Service">
+  <link rel="stylesheet" href="stylesheet.css">
+  <style>
+    /* CSS Variables for consistent theming */
+    :root {
+      --primary-red: #d32f2f;
+      --dark-red: #b71c1c;
+      --light-red: #ffcdd2;
+      --white: #ffffff;
+      --light-gray: #f5f5f5;
+      --dark-gray: #424242;
+      --medium-gray: #757575;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: var(--light-gray);
+    }
+    
+    header {
+      background-color: var(--primary-red);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    nav {
+      background-color: var(--dark-red);
+      padding: 15px 0;
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    nav li {
+      margin: 0 15px;
+    }
+    
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1, h2, h3 {
+      color: var(--dark-red);
+      margin-bottom: 15px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--light-red);
+      padding-bottom: 10px;
+    }
+    
+    p {
+      margin-bottom: 15px;
+    }
+    
+    footer {
+      background-color: var(--primary-red);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    footer a {
+      color: var(--light-red);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: var(--white);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: var(--primary-red);
+      color: var(--white);
+      font-weight: bold;
+    }
+    
+    tr:hover {
+      background-color: var(--light-red);
+    }
+    
+    /* Form Styles */
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-red);
+      box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+    }
+    
+    .error {
+      color: var(--primary-red);
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+    
+    button {
+      background-color: var(--primary-red);
+      color: var(--white);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: var(--dark-red);
+    }
+    
+    /* Interactive Elements */
+    .province-filter {
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .filter-button {
+      background-color: var(--white);
+      color: var(--dark-gray);
+      border: 1px solid var(--medium-gray);
+      padding: 8px 15px;
+      margin: 0 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .filter-button.active {
+      background-color: var(--primary-red);
+      color: var(--white);
+      border-color: var(--primary-red);
+    }
+    
+    .search-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .search-box {
+      padding: 10px;
+      width: 70%;
+      max-width: 400px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .search-button {
+      padding: 10px 20px;
+      background-color: var(--primary-red);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .highlight {
+      background-color: yellow;
+    }
+    
+    .map-container {
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .map-placeholder {
+      width: 100%;
+      height: 300px;
+      background-color: var(--light-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav li {
+        margin: 5px 0;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><u>Contact Details</u></h1>
+    <p>Find SANBS locations and get in touch</p>
+  </header>
+
+  <nav>
+    <div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="enquiry.html">Enquiries</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <!-- Contact Form Section -->
+    <section>
+      <h2>Send Us a Message</h2>
+      <div class="form-container">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error" id="nameError">Please enter your full name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError">Please enter a valid email address</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+            <div class="error" id="phoneError">Please enter a valid phone number</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="donation">Blood Donation</option>
+              <option value="volunteer">Volunteering</option>
+              <option value="partnership">Partnership</option>
+              <option value="general">General Inquiry</option>
+              <option value="location">Location Information</option>
+            </select>
+            <div class="error" id="subjectError">Please select a subject</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="error" id="messageError">Please enter your message</div>
+          </div>
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Interactive Map Section -->
+    <section>
+      <h2>Find a Donor Center Near You</h2>
+      <div class="map-container">
+        <p>Select a province to view donor centers on the map:</p>
+        <div class="province-filter">
+          <button class="filter-button active" data-province="all">All Provinces</button>
+          <button class="filter-button" data-province="gauteng">Gauteng</button>
+          <button class="filter-button" data-province="western-cape">Western Cape</button>
+          <button class="filter-button" data-province="kzn">KwaZulu-Natal</button>
+          <button class="filter-button" data-province="eastern-cape">Eastern Cape</button>
+        </div>
+        <div class="map-placeholder" id="mapPlaceholder">
+          <p>Interactive map showing SANBS locations (Map integration would go here)</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Search Functionality -->
+    <section>
+      <h2>Search Locations</h2>
+      <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Search locations by address or area...">
+        <button id="searchButton" class="search-button">Search</button>
+        <button id="clearSearch" class="search-button" style="display:none;">Clear Search</button>
+      </div>
+    </section>
+    
+    <!-- Contact Information Table -->
+    <section>
+      <h2>SANBS Locations</h2>
+      <table id="locationsTable">
+        <thead>
+          <tr>
+            <th style="width: 4cm; text-align: left;">Province</th>
+            <th style="width: 5cm;">Physical Address</th>
+            <th>Contact Number</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table row for Gauteng location 1 -->
+          <tr data-province="gauteng">
+            <td>Gauteng</td>
+            <td>Jean Village Shopping Centre, Jean Avenue, Jacob Rammutla</td>
+            <td>012 391 2597 / 012 391 2598 / 012 391 2599</td>
+            <td><button class="view-details" data-location="1">View Details</button></td>
+          </tr>
+          
+          <!-- Table row for Gauteng location 2 -->
+          <tr data-province="gauteng">
+            <td>Gauteng</td>
+            <td>Quagga Centre: 12 Quagga Rd, Pretoria West, Pretoria, 0183</td>
+            <td>(See nearby Centurion or Pretoria branches)</td>
+            <td><button class="view-details" data-location="2">View Details</button></td>
+          </tr>
+          
+          <!-- Table row for Gauteng location 3 -->
+          <tr data-province="gauteng">
+            <td>Gauteng</td>
+            <td>Sammy Marks Square, 138 Church St, Pretoria Central, Pretoria, 0002</td>
+            <td>012 391 2584</td>
+            <td><button class="view-details" data-location="3">View Details</button></td>
+          </tr>
+          
+          <!-- Table row for Gauteng location 4 -->
+          <tr data-province="gauteng">
+            <td>Gauteng</td>
+            <td>1122 Burnett Street, Hatfield</td>
+            <td>012 391 2590 / 012 391 2593 / 012 391 2592</td>
+            <td><button class="view-details" data-location="4">View Details</button></td>
+          </tr>
+          
+          <!-- Table row for Gauteng location 5 -->
+          <tr data-province="gauteng">
+            <td>Gauteng</td>
+            <td>Shop 5, Ground floor, Silkaats Causeway, Faerie Glen</td>
+            <td>012 391 2558 / 012 391 2559</td>
+            <td><button class="view-details" data-location="5">View Details</button></td>
+          </tr>
+          
+          <!-- Table row for Gauteng location 6 -->
+          <tr data-province="gauteng">
+            <td>Gauteng</td>
+            <td>Next to Musica, Sefako and Enkeldoorn Ave</td>
+            <td>012 391 2655 / 012 391 2656</td>
+            <td><button class="view-details" data-location="6">View Details</button></td>
+          </tr>
+          
+          <!-- Additional provinces for demonstration -->
+          <tr data-province="western-cape">
+            <td>Western Cape</td>
+            <td>45 Bree Street, Cape Town Central, Cape Town, 8001</td>
+            <td>021 421 1911</td>
+            <td><button class="view-details" data-location="7">View Details</button></td>
+          </tr>
+          
+          <tr data-province="kzn">
+            <td>KwaZulu-Natal</td>
+            <td>123 Musgrave Road, Berea, Durban, 4001</td>
+            <td>031 202 1756</td>
+            <td><button class="view-details" data-location="8">View Details</button></td>
+          </tr>
+          
+          <tr data-province="eastern-cape">
+            <td>Eastern Cape</td>
+            <td>78 Russell Road, Port Elizabeth, 6001</td>
+            <td>041 391 8200</td>
+            <td><button class="view-details" data-location="9">View Details</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Location Details Modal (hidden by default) -->
+    <div id="locationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
+      <div style="background-color: white; padding: 30px; border-radius: 8px; max-width: 500px; width: 90%;">
+        <h2 id="modalTitle">Location Details</h2>
+        <div id="modalContent">
+          <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+          <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+          <p><strong>Hours:</strong> <span id="modalHours"></span></p>
+          <p><strong>Services:</strong> <span id="modalServices"></span></p>
+        </div>
+        <button id="closeModal" style="margin-top: 20px;">Close</button>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 South African National Blood Service | <a href="https://www.sanbs.org.za">Learn More</a></p>
+  </footer>
+
+  <script>
+    // DOM Manipulation and Interactive Features
+    document.addEventListener('DOMContentLoaded', function() {
+      // Form Validation
+      const contactForm = document.getElementById('contactForm');
+      
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Reset previous errors
+        clearErrors();
+        
+        // Validate form fields
+        let isValid = true;
+        
+        // Name validation
+        const name = document.getElementById('name').value.trim();
+        if (name === '') {
+          showError('nameError', 'Please enter your full name');
+          isValid = false;
+        }
+        
+        // Email validation
+        const email = document.getElementById('email').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === '') {
+          showError('emailError', 'Please enter your email address');
+          isValid = false;
+        } else if (!emailRegex.test(email)) {
+          showError('emailError', 'Please enter a valid email address');
+          isValid = false;
+        }
+        
+        // Phone validation (optional)
+        const phone = document.getElementById('phone').value.trim();
+        const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+        if (phone !== '' && !phoneRegex.test(phone)) {
+          showError('phoneError', 'Please enter a valid phone number');
+          isValid = false;
+        }
+        
+        // Subject validation
+        const subject = document.getElementById('subject').value;
+        if (subject === '') {
+          showError('subjectError', 'Please select a subject');
+          isValid = false;
+        }
+        
+        // Message validation
+        const message = document.getElementById('message').value.trim();
+        if (message === '') {
+          showError('messageError', 'Please enter your message');
+          isValid = false;
+        }
+        
+        // If form is valid, submit it
+        if (isValid) {
+          alert('Thank you for your message! We will get back to you soon.');
+          contactForm.reset();
+        }
+      });
+      
+      function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+      }
+      
+      function clearErrors() {
+        const errorElements = document.querySelectorAll('.error');
+        errorElements.forEach(element => {
+          element.style.display = 'none';
+        });
+      }
+      
+      // Real-time validation for better UX
+      const formInputs = contactForm.querySelectorAll('input, select, textarea');
+      
+      formInputs.forEach(input => {
+        input.addEventListener('blur', function() {
+          validateField(this);
+        });
+        
+        input.addEventListener('input', function() {
+          // Clear error when user starts typing
+          const fieldName = this.id;
+          const errorElement = document.getElementById(fieldName + 'Error');
+          if (errorElement) {
+            errorElement.style.display = 'none';
+          }
+        });
+      });
+      
+      function validateField(field) {
+        const value = field.value.trim();
+        const fieldName = field.id;
+        
+        switch(fieldName) {
+          case 'name':
+            if (value === '') {
+              showError('nameError', 'Please enter your full name');
+            }
+            break;
+          case 'email':
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (value === '') {
+              showError('emailError', 'Please enter your email address');
+            } else if (!emailRegex.test(value)) {
+              showError('emailError', 'Please enter a valid email address');
+            }
+            break;
+          case 'phone':
+            const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+            if (value !== '' && !phoneRegex.test(value)) {
+              showError('phoneError', 'Please enter a valid phone number');
+            }
+            break;
+          case 'subject':
+            if (value === '') {
+              showError('subjectError', 'Please select a subject');
+            }
+            break;
+          case 'message':
+            if (value === '') {
+              showError('messageError', 'Please enter your message');
+            }
+            break;
+        }
+      }
+      
+      // Province Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const tableRows = document.querySelectorAll('#locationsTable tbody tr');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const province = this.getAttribute('data-province');
+          
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter table rows
+          tableRows.forEach(row => {
+            if (province === 'all' || row.getAttribute('data-province') === province) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+          
+          // Update map placeholder text
+          const mapPlaceholder = document.getElementById('mapPlaceholder');
+          if (province === 'all') {
+            mapPlaceholder.innerHTML = '<p>Interactive map showing all SANBS locations (Map integration would go here)</p>';
+          } else {
+            mapPlaceholder.innerHTML = `<p>Interactive map showing SANBS locations in ${province.replace('-', ' ').toUpperCase()} (Map integration would go here)</p>`;
+          }
+        });
+      });
+      
+      // Search Functionality
+      const searchInput = document.getElementById('searchInput');
+      const searchButton = document.getElementById('searchButton');
+      const clearSearchButton = document.getElementById('clearSearch');
+      
+      searchButton.addEventListener('click', performSearch);
+      searchInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+          performSearch();
+        }
+      });
+      
+      function performSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        
+        if (searchTerm === '') {
+          return;
+        }
+        
+        // Remove previous highlights
+        removeHighlights();
+        
+        // Search through table rows
+        let foundResults = false;
+        tableRows.forEach(row => {
+          const cells = row.querySelectorAll('td');
+          let rowContainsTerm = false;
+          
+          cells.forEach(cell => {
+            const text = cell.textContent.toLowerCase();
+            
+            if (text.includes(searchTerm)) {
+              // Highlight matching text
+              const regex = new RegExp(`(${searchTerm})`, 'gi');
+              cell.innerHTML = cell.textContent.replace(regex, '<span class="highlight">$1</span>');
+              rowContainsTerm = true;
+              foundResults = true;
+            }
+          });
+          
+          // Show/hide rows based on search
+          if (rowContainsTerm) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+        
+        // Show message if no results found
+        if (!foundResults) {
+          alert('No locations found matching your search.');
+        }
+        
+        // Show clear search button
+        clearSearchButton.style.display = 'inline-block';
+      }
+      
+      clearSearchButton.addEventListener('click', function() {
+        searchInput.value = '';
+        removeHighlights();
+        this.style.display = 'none';
+        
+        // Show all rows
+        tableRows.forEach(row => {
+          row.style.display = '';
+        });
+      });
+      
+      function removeHighlights() {
+        const highlights = document.querySelectorAll('.highlight');
+        highlights.forEach(highlight => {
+          const parent = highlight.parentNode;
+          parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+          parent.normalize();
+        });
+      }
+      
+      // Location Details Modal
+      const viewDetailsButtons = document.querySelectorAll('.view-details');
+      const locationModal = document.getElementById('locationModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalAddress = document.getElementById('modalAddress');
+      const modalPhone = document.getElementById('modalPhone');
+      const modalHours = document.getElementById('modalHours');
+      const modalServices = document.getElementById('modalServices');
+      const closeModal = document.getElementById('closeModal');
+      
+      // Sample location data (in a real app, this would come from a database)
+      const locationData = {
+        1: {
+          title: 'Jean Village Shopping Centre',
+          address: 'Jean Village Shopping Centre, Jean Avenue, Jacob Rammutla',
+          phone: '012 391 2597 / 012 391 2598 / 012 391 2599',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM, Sat: 8:00 AM - 1:00 PM',
+          services: 'Whole Blood Donation, Platelet Donation'
+        },
+        2: {
+          title: 'Quagga Centre',
+          address: '12 Quagga Rd, Pretoria West, Pretoria, 0183',
+          phone: '(See nearby Centurion or Pretoria branches)',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM',
+          services: 'Whole Blood Donation'
+        },
+        3: {
+          title: 'Sammy Marks Square',
+          address: 'Sammy Marks Square, 138 Church St, Pretoria Central, Pretoria, 0002',
+          phone: '012 391 2584',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM, Sat: 8:00 AM - 1:00 PM',
+          services: 'Whole Blood Donation, Plasma Donation'
+        },
+        4: {
+          title: 'Hatfield Donor Centre',
+          address: '1122 Burnett Street, Hatfield',
+          phone: '012 391 2590 / 012 391 2593 / 012 391 2592',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM',
+          services: 'Whole Blood Donation, Platelet Donation'
+        },
+        5: {
+          title: 'Silkaats Causeway',
+          address: 'Shop 5, Ground floor, Silkaats Causeway, Faerie Glen',
+          phone: '012 391 2558 / 012 391 2559',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM, Sat: 8:00 AM - 1:00 PM',
+          services: 'Whole Blood Donation'
+        },
+        6: {
+          title: 'Sefako and Enkeldoorn Ave',
+          address: 'Next to Musica, Sefako and Enkeldoorn Ave',
+          phone: '012 391 2655 / 012 391 2656',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM',
+          services: 'Whole Blood Donation, Plasma Donation'
+        },
+        7: {
+          title: 'Cape Town Central',
+          address: '45 Bree Street, Cape Town Central, Cape Town, 8001',
+          phone: '021 421 1911',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM, Sat: 8:00 AM - 1:00 PM',
+          services: 'Whole Blood Donation, Platelet Donation'
+        },
+        8: {
+          title: 'Durban Donor Centre',
+          address: '123 Musgrave Road, Berea, Durban, 4001',
+          phone: '031 202 1756',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM',
+          services: 'Whole Blood Donation'
+        },
+        9: {
+          title: 'Port Elizabeth Donor Centre',
+          address: '78 Russell Road, Port Elizabeth, 6001',
+          phone: '041 391 8200',
+          hours: 'Mon-Fri: 8:00 AM - 5:00 PM, Sat: 8:00 AM - 1:00 PM',
+          services: 'Whole Blood Donation, Plasma Donation'
+        }
+      };
+      
+      viewDetailsButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const locationId = this.getAttribute('data-location');
+          const location = locationData[locationId];
+          
+          if (location) {
+            modalTitle.textContent = location.title;
+            modalAddress.textContent = location.address;
+            modalPhone.textContent = location.phone;
+            modalHours.textContent = location.hours;
+            modalServices.textContent = location.services;
+            
+            locationModal.style.display = 'flex';
+          }
+        });
+      });
+      
+      closeModal.addEventListener('click', function() {
+        locationModal.style.display = 'none';
+      });
+      
+      // Close modal when clicking outside the content
+      locationModal.addEventListener('click', function(event) {
+        if (event.target === locationModal) {
+          locationModal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

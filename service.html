@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SANBS Services - Blood Collection, Testing & Distribution | South African National Blood Service</title>
+  <meta name="description" content="Discover SANBS comprehensive blood services including collection, testing, processing, storage, distribution, and emergency response across South Africa.">
+  <meta name="keywords" content="SANBS services, blood donation, blood testing, blood processing, emergency blood response, platelet donation, South Africa">
+  <meta name="author" content="South African National Blood Service">
+  <link rel="stylesheet" href="stylesheet.css">
+  <style>
+    /* CSS Variables for consistent theming */
+    :root {
+      --primary-red: #d32f2f;
+      --dark-red: #b71c1c;
+      --light-red: #ffcdd2;
+      --white: #ffffff;
+      --light-gray: #f5f5f5;
+      --dark-gray: #424242;
+      --medium-gray: #757575;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: var(--light-gray);
+    }
+    
+    header {
+      background-color: var(--primary-red);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    nav {
+      background-color: var(--dark-red);
+      padding: 15px 0;
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    nav li {
+      margin: 0 15px;
+    }
+    
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1, h2, h3 {
+      color: var(--dark-red);
+      margin-bottom: 15px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--light-red);
+      padding-bottom: 10px;
+    }
+    
+    p {
+      margin-bottom: 15px;
+    }
+    
+    footer {
+      background-color: var(--primary-red);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    footer a {
+      color: var(--light-red);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Service Cards */
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary-red);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .service-features {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    
+    .service-features li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+    
+    .service-features li:before {
+      content: "✓";
+      color: var(--primary-red);
+      font-weight: bold;
+      position: absolute;
+      left: -20px;
+    }
+    
+    /* Form Styles */
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-red);
+      box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+    }
+    
+    .error {
+      color: var(--primary-red);
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+    
+    button {
+      background-color: var(--primary-red);
+      color: var(--white);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: var(--dark-red);
+    }
+    
+    /* Interactive Elements */
+    .service-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+      justify-content: center;
+    }
+    
+    .filter-button {
+      background-color: var(--white);
+      color: var(--dark-gray);
+      border: 1px solid var(--medium-gray);
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .filter-button.active {
+      background-color: var(--primary-red);
+      color: var(--white);
+      border-color: var(--primary-red);
+    }
+    
+    .search-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .search-box {
+      padding: 10px;
+      width: 70%;
+      max-width: 400px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .search-button {
+      padding: 10px 20px;
+      background-color: var(--primary-red);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .highlight {
+      background-color: yellow;
+    }
+    
+    .service-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .action-button {
+      background-color: var(--light-red);
+      color: var(--dark-red);
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .action-button:hover {
+      background-color: var(--primary-red);
+      color: var(--white);
+    }
+    
+    /* Service Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      background-color: var(--white);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .comparison-table th, .comparison-table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .comparison-table th {
+      background-color: var(--primary-red);
+      color: var(--white);
+      font-weight: bold;
+    }
+    
+    .comparison-table tr:hover {
+      background-color: var(--light-red);
+    }
+    
+    /* Service Process Visualization */
+    .process-steps {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      position: relative;
+    }
+    
+    .process-step {
+      text-align: center;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary-red);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-weight: bold;
+    }
+    
+    .step-connector {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--medium-gray);
+      z-index: 0;
+    }
+    
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    
+    /* Service Availability Indicator */
+    .availability-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    
+    .available {
+      background-color: #4CAF50;
+    }
+    
+    .limited {
+      background-color: #FFC107;
+    }
+    
+    .unavailable {
+      background-color: #F44336;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav li {
+        margin: 5px 0;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .process-steps {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .step-connector {
+        display: none;
+      }
+      
+      .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      .service-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><u>SANBS: Services We Offer</u></h1>
+    <p>From donor arm to patient bedside safe, reliable blood for South Africa.</p>
+  </header>
+
+  <nav>
+    <div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="enquiry.html">Enquiries</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Service Search and Filters -->
+    <section>
+      <h2>Find the Right Service for You</h2>
+      <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Search services...">
+        <button id="searchButton" class="search-button">Search</button>
+        <button id="clearSearch" class="search-button" style="display:none;">Clear Search</button>
+      </div>
+      
+      <div class="service-filters">
+        <button class="filter-button active" data-filter="all">All Services</button>
+        <button class="filter-button" data-filter="donation">Donation Services</button>
+        <button class="filter-button" data-filter="testing">Testing Services</button>
+        <button class="filter-button" data-filter="processing">Processing Services</button>
+        <button class="filter-button" data-filter="emergency">Emergency Services</button>
+      </div>
+    </section>
+    
+    <!-- Service Process Visualization -->
+    <section>
+      <h2>Our Service Process</h2>
+      <div class="process-steps">
+        <div class="step-connector"></div>
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Collection</h3>
+          <p>Blood donation from volunteers</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Testing</h3>
+          <p>Rigorous screening and analysis</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Processing</h3>
+          <p>Separation into components</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Storage</h3>
+          <p>Temperature-controlled preservation</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h3>Distribution</h3>
+          <p>Delivery to hospitals and clinics</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Service Booking Form -->
+    <section>
+      <h2>Book a Donation Appointment</h2>
+      <div class="form-container">
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="bookingName">Full Name</label>
+            <input type="text" id="bookingName" name="bookingName" required>
+            <div class="error" id="bookingNameError">Please enter your full name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="bookingEmail">Email Address</label>
+            <input type="email" id="bookingEmail" name="bookingEmail" required>
+            <div class="error" id="bookingEmailError">Please enter a valid email address</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="bookingPhone">Phone Number</label>
+            <input type="tel" id="bookingPhone" name="bookingPhone" required>
+            <div class="error" id="bookingPhoneError">Please enter a valid phone number</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="bookingService">Service Type</label>
+            <select id="bookingService" name="bookingService" required>
+              <option value="">Select a service</option>
+              <option value="whole-blood">Whole Blood Donation</option>
+              <option value="platelets">Platelet Donation</option>
+              <option value="plasma">Plasma Donation</option>
+              <option value="double-red">Double Red Cell Donation</option>
+            </select>
+            <div class="error" id="bookingServiceError">Please select a service type</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="bookingDate">Preferred Date</label>
+            <input type="date" id="bookingDate" name="bookingDate" required>
+            <div class="error" id="bookingDateError">Please select a date</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="bookingLocation">Preferred Location</label>
+            <select id="bookingLocation" name="bookingLocation" required>
+              <option value="">Select a location</option>
+              <option value="johannesburg">Johannesburg</option>
+              <option value="pretoria">Pretoria</option>
+              <option value="cape-town">Cape Town</option>
+              <option value="durban">Durban</option>
+              <option value="port-elizabeth">Port Elizabeth</option>
+            </select>
+            <div class="error" id="bookingLocationError">Please select a location</div>
+          </div>
+          
+          <button type="submit">Book Appointment</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Service Comparison Table -->
+    <section>
+      <h2>Service Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Service Type</th>
+            <th>Duration</th>
+            <th>Frequency</th>
+            <th>Impact</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Whole Blood Donation</td>
+            <td>15-20 minutes</td>
+            <td>Every 56 days</td>
+            <td>Can save up to 3 lives</td>
+            <td><span class="availability-indicator available"></span> Widely Available</td>
+          </tr>
+          <tr>
+            <td>Platelet Donation</td>
+            <td>60-90 minutes</td>
+            <td>Every 7 days (up to 24 times/year)</td>
+            <td>Helps cancer patients, surgery patients</td>
+            <td><span class="availability-indicator available"></span> Available at select centers</td>
+          </tr>
+          <tr>
+            <td>Plasma Donation</td>
+            <td>45-60 minutes</td>
+            <td>Every 28 days</td>
+            <td>Treats burn victims, immune disorders</td>
+            <td><span class="availability-indicator limited"></span> Limited Availability</td>
+          </tr>
+          <tr>
+            <td>Double Red Cell Donation</td>
+            <td>30-45 minutes</td>
+            <td>Every 112 days</td>
+            <td>Double the red cells for trauma patients</td>
+            <td><span class="availability-indicator available"></span> Available at select centers</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Services Sections -->
+    <section class="service-card" data-category="donation">
+      <div class="service-icon">💉</div>
+      <h2>1. Blood Collection & Donation</h2>
+      <p>
+        SANBS organizes fixed donation sites and mobile blood drives across the country, making it easy and convenient for people to give blood.
+        Donors are guided through medical screening, the donation process, and aftercare to ensure both safety and comfort.
+      </p>
+      <ul class="service-features">
+        <li>Fixed donor centers in urban areas</li>
+        <li>Mobile blood drives in rural communities</li>
+        <li>Comprehensive donor screening</li>
+        <li>Comfortable donation experience</li>
+        <li>Post-donation care and refreshments</li>
+      </ul>
+      <div class="service-actions">
+        <button class="action-button find-center-button">Find a Donation Center</button>
+        <button class="action-button eligibility-button">Check Eligibility</button>
+        <button class="action-button book-button">Book Appointment</button>
+      </div>
+    </section>
+
+    <section class="service-card" data-category="testing">
+      <div class="service-icon">🔬</div>
+      <h2>2. Testing & Screening</h2>
+      <p>
+        Every single unit of donated blood undergoes rigorous laboratory testing. 
+        This includes screening for transfusion-transmissible infections and ensuring compatibility, guaranteeing that only the safest blood reaches patients in need.
+      </p>
+      <ul class="service-features">
+        <li>Comprehensive infectious disease screening</li>
+        <li>Blood typing and cross-matching</li>
+        <li>Advanced nucleic acid testing (NAT)</li>
+        <li>Quality control and assurance</li>
+        <li>Compliance with international standards</li>
+      </ul>
+      <div class="service-actions">
+        <button class="action-button learn-more-button">Learn About Safety</button>
+        <button class="action-button quality-button">Quality Standards</button>
+      </div>
+    </section>
+
+    <section class="service-card" data-category="processing">
+      <div class="service-icon">⚗️</div>
+      <h2>3. Processing & Component Preparation</h2>
+      <p>
+        Blood donations are carefully processed into components such as red blood cells, plasma, and platelets. 
+        This allows one donation to benefit multiple patients with different medical needs, from trauma victims to cancer patients.
+      </p>
+      <ul class="service-features">
+        <li>Separation into red cells, plasma, platelets</li>
+        <li>Leukoreduction (white cell removal)</li>
+        <li>Irradiation for immunocompromised patients</li>
+        <li>Cryopreservation for rare blood types</li>
+        <li>Special pediatric preparations</li>
+      </ul>
+      <div class="service-actions">
+        <button class="action-button components-button">Blood Components</button>
+        <button class="action-button uses-button">Clinical Uses</button>
+      </div>
+    </section>
+
+    <section class="service-card" data-category="processing">
+      <div class="service-icon">❄️</div>
+      <h2>4. Storage & Inventory Management</h2>
+      <p>
+        SANBS maintains strict temperature-controlled storage and monitors stock levels nationwide.
+        This ensures that blood is available when and where it is needed most, while also maintaining quality and preventing shortages.
+      </p>
+      <ul class="service-features">
+        <li>Temperature-monitored storage facilities</li>
+        <li>Real-time inventory tracking</li>
+        <li>Automated stock rotation</li>
+        <li>Emergency reserve management</li>
+        <li>National distribution network</li>
+      </ul>
+      <div class="service-actions">
+        <button class="action-button inventory-button">Inventory Status</button>
+        <button class="action-button storage-button">Storage Standards</button>
+      </div>
+    </section>
+
+    <section class="service-card" data-category="processing">
+      <div class="service-icon">🚚</div>
+      <h2>5. Distribution & Hospital Support</h2>
+      <p>
+        Hospitals and clinics rely on SANBS for timely blood supply and expert support.
+        Our teams provide not only the products but also guidance to clinicians on selecting the right component for each patient's treatment.
+      </p>
+      <ul class="service-features">
+        <li>24/7 emergency delivery service</li>
+        <li>Clinical consultation services</li>
+        <li>Transfusion medicine education</li>
+        <li>Hospital blood bank support</li>
+        <li>Emergency response coordination</li>
+      </ul>
+      <div class="service-actions">
+        <button class="action-button hospital-button">Hospital Services</button>
+        <button class="action-button clinical-button">Clinical Support</button>
+      </div>
+    </section>
+
+    <section class="service-card" data-category="emergency">
+      <div class="service-icon">🚨</div>
+      <h2>6. Emergency and Disaster Response</h2>
+      <p>
+        In times of crisis, SANBS is ready to act swiftly. 
+        Whether responding to natural disasters, mass-casualty incidents, or urgent surgical needs, we mobilize emergency collections, prioritize logistics, and ensure that lifesaving blood products reach the patients who need them most.
+      </p>
+      <ul class="service-features">
+        <li>24/7 emergency operations center</li>
+        <li>Rapid response teams</li>
+        <li>Mass casualty preparedness</li>
+        <li>Disaster mobilization protocols</li>
+        <li>Inter-agency coordination</li>
+      </ul>
+      <div class="service-actions">
+        <button class="action-button emergency-button">Emergency Protocols</button>
+        <button class="action-button disaster-button">Disaster Response</button>
+      </div>
+    </section>
+
+    <section class="service-card" data-category="donation">
+      <div class="service-icon">⭐</div>
+      <h2>7. Specialized Donations</h2>
+      <p>
+        Beyond standard whole blood, SANBS also facilitates specialized donations such as apheresis platelets and plasma. 
+        We support rare blood type programs and tailor collections to meet the unique needs of patients requiring advanced treatments.
+      </p>
+      <ul class="service-features">
+        <li>Apheresis platelet collections</li>
+        <li>Therapeutic plasma exchange</li>
+        <li>Rare donor registry</li>
+        <li>Stem cell collection support</li>
+        <li>Directed donation programs</li>
+      </ul>
+      <div class="service-actions">
+        <button class="action-button specialized-button">Specialized Donations</button>
+        <button class="action-button rare-button">Rare Blood Types</button>
+      </div>
+    </section>
+    
+    <!-- Service Request Form -->
+    <section>
+      <h2>Request a Special Service</h2>
+      <p>For hospitals, clinics, or organizations requiring specialized blood services</p>
+      <div class="form-container">
+        <form id="serviceRequestForm">
+          <div class="form-group">
+            <label for="requestName">Contact Person</label>
+            <input type="text" id="requestName" name="requestName" required>
+            <div class="error" id="requestNameError">Please enter contact person name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="requestOrganization">Organization</label>
+            <input type="text" id="requestOrganization" name="requestOrganization" required>
+            <div class="error" id="requestOrganizationError">Please enter organization name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="requestPhone">Contact Number</label>
+            <input type="tel" id="requestPhone" name="requestPhone" required>
+            <div class="error" id="requestPhoneError">Please enter a valid phone number</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="requestService">Service Required</label>
+            <select id="requestService" name="requestService" required>
+              <option value="">Select required service</option>
+              <option value="bulk-supply">Bulk Blood Supply</option>
+              <option value="specialized-components">Specialized Components</option>
+              <option value="rare-blood">Rare Blood Types</option>
+              <option value="training">Staff Training</option>
+              <option value="mobile-drive">Mobile Blood Drive</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="error" id="requestServiceError">Please select a service</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="requestDetails">Additional Details</label>
+            <textarea id="requestDetails" name="requestDetails" rows="4"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="requestUrgency">Urgency Level</label>
+            <select id="requestUrgency" name="requestUrgency" required>
+              <option value="">Select urgency</option>
+              <option value="routine">Routine (Within 7 days)</option>
+              <option value="urgent">Urgent (Within 48 hours)</option>
+              <option value="emergency">Emergency (Immediate)</option>
+            </select>
+            <div class="error" id="requestUrgencyError">Please select urgency level</div>
+          </div>
+          
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Service Information Modal -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <h2 id="modalServiceTitle">Service Information</h2>
+      <div id="modalServiceContent">
+        <p>Detailed information about the selected service will appear here.</p>
+      </div>
+      <button id="closeServiceModal">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SANBS Safeguarding South Africa's blood supply.</p>
+  </footer>
+
+  <script>
+    // DOM Manipulation and Interactive Features
+    document.addEventListener('DOMContentLoaded', function() {
+      // Service Filtering
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const serviceCards = document.querySelectorAll('.service-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter service cards
+          serviceCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Search Functionality
+      const searchInput = document.getElementById('searchInput');
+      const searchButton = document.getElementById('searchButton');
+      const clearSearchButton = document.getElementById('clearSearch');
+      
+      searchButton.addEventListener('click', performSearch);
+      searchInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+          performSearch();
+        }
+      });
+      
+      function performSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        
+        if (searchTerm === '') {
+          return;
+        }
+        
+        // Remove previous highlights
+        removeHighlights();
+        
+        // Search through service cards
+        let foundResults = false;
+        serviceCards.forEach(card => {
+          const title = card.querySelector('h2').textContent.toLowerCase();
+          const content = card.textContent.toLowerCase();
+          
+          if (title.includes(searchTerm) || content.includes(searchTerm)) {
+            // Highlight matching text in title
+            const titleElement = card.querySelector('h2');
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            titleElement.innerHTML = titleElement.textContent.replace(regex, '<span class="highlight">$1</span>');
+            
+            card.style.display = 'block';
+            foundResults = true;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // Show message if no results found
+        if (!foundResults) {
+          alert('No services found matching your search.');
+        }
+        
+        // Show clear search button
+        clearSearchButton.style.display = 'inline-block';
+      }
+      
+      clearSearchButton.addEventListener('click', function() {
+        searchInput.value = '';
+        removeHighlights();
+        this.style.display = 'none';
+        
+        // Show all service cards
+        serviceCards.forEach(card => {
+          card.style.display = 'block';
+        });
+      });
+      
+      function removeHighlights() {
+        const highlights = document.querySelectorAll('.highlight');
+        highlights.forEach(highlight => {
+          const parent = highlight.parentNode;
+          parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+          parent.normalize();
+        });
+      }
+      
+      // Booking Form Validation
+      const bookingForm = document.getElementById('bookingForm');
+      
+      bookingForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Reset previous errors
+        clearErrors('booking');
+        
+        // Validate form fields
+        let isValid = true;
+        
+        // Name validation
+        const bookingName = document.getElementById('bookingName').value.trim();
+        if (bookingName === '') {
+          showError('bookingNameError', 'Please enter your full name');
+          isValid = false;
+        }
+        
+        // Email validation
+        const bookingEmail = document.getElementById('bookingEmail').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (bookingEmail === '') {
+          showError('bookingEmailError', 'Please enter your email address');
+          isValid = false;
+        } else if (!emailRegex.test(bookingEmail)) {
+          showError('bookingEmailError', 'Please enter a valid email address');
+          isValid = false;
+        }
+        
+        // Phone validation
+        const bookingPhone = document.getElementById('bookingPhone').value.trim();
+        const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+        if (bookingPhone === '') {
+          showError('bookingPhoneError', 'Please enter your phone number');
+          isValid = false;
+        } else if (!phoneRegex.test(bookingPhone)) {
+          showError('bookingPhoneError', 'Please enter a valid phone number');
+          isValid = false;
+        }
+        
+        // Service validation
+        const bookingService = document.getElementById('bookingService').value;
+        if (bookingService === '') {
+          showError('bookingServiceError', 'Please select a service type');
+          isValid = false;
+        }
+        
+        // Date validation
+        const bookingDate = document.getElementById('bookingDate').value;
+        if (bookingDate === '') {
+          showError('bookingDateError', 'Please select a date');
+          isValid = false;
+        } else {
+          const selectedDate = new Date(bookingDate);
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          
+          if (selectedDate < today) {
+            showError('bookingDateError', 'Please select a future date');
+            isValid = false;
+          }
+        }
+        
+        // Location validation
+        const bookingLocation = document.getElementById('bookingLocation').value;
+        if (bookingLocation === '') {
+          showError('bookingLocationError', 'Please select a location');
+          isValid = false;
+        }
+        
+        // If form is valid, submit it
+        if (isValid) {
+          alert('Thank you for booking an appointment! We will contact you to confirm the details.');
+          bookingForm.reset();
+        }
+      });
+      
+      // Service Request Form Validation
+      const serviceRequestForm = document.getElementById('serviceRequestForm');
+      
+      serviceRequestForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Reset previous errors
+        clearErrors('request');
+        
+        // Validate form fields
+        let isValid = true;
+        
+        // Name validation
+        const requestName = document.getElementById('requestName').value.trim();
+        if (requestName === '') {
+          showError('requestNameError', 'Please enter contact person name');
+          isValid = false;
+        }
+        
+        // Organization validation
+        const requestOrganization = document.getElementById('requestOrganization').value.trim();
+        if (requestOrganization === '') {
+          showError('requestOrganizationError', 'Please enter organization name');
+          isValid = false;
+        }
+        
+        // Phone validation
+        const requestPhone = document.getElementById('requestPhone').value.trim();
+        const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+        if (requestPhone === '') {
+          showError('requestPhoneError', 'Please enter contact number');
+          isValid = false;
+        } else if (!phoneRegex.test(requestPhone)) {
+          showError('requestPhoneError', 'Please enter a valid phone number');
+          isValid = false;
+        }
+        
+        // Service validation
+        const requestService = document.getElementById('requestService').value;
+        if (requestService === '') {
+          showError('requestServiceError', 'Please select a service');
+          isValid = false;
+        }
+        
+        // Urgency validation
+        const requestUrgency = document.getElementById('requestUrgency').value;
+        if (requestUrgency === '') {
+          showError('requestUrgencyError', 'Please select urgency level');
+          isValid = false;
+        }
+        
+        // If form is valid, submit it
+        if (isValid) {
+          alert('Service request submitted! Our team will contact you within 24 hours.');
+          serviceRequestForm.reset();
+        }
+      });
+      
+      // Service Action Buttons
+      const actionButtons = document.querySelectorAll('.action-button');
+      const serviceModal = document.getElementById('serviceModal');
+      const modalServiceTitle = document.getElementById('modalServiceTitle');
+      const modalServiceContent = document.getElementById('modalServiceContent');
+      const closeServiceModal = document.getElementById('closeServiceModal');
+      
+      actionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const serviceCard = this.closest('.service-card');
+          const serviceTitle = serviceCard.querySelector('h2').textContent;
+          const buttonText = this.textContent;
+          
+          // Set modal content based on button type
+          modalServiceTitle.textContent = `${serviceTitle} - ${buttonText}`;
+          
+          let content = '';
+          if (buttonText.includes('Find')) {
+            content = `
+              <p>Our donor centers are located throughout South Africa. Use our location finder to:</p>
+              <ul>
+                <li>Find the nearest donation center</li>
+                <li>Check operating hours</li>
+                <li>View available appointment slots</li>
+                <li>Get directions</li>
+              </ul>
+              <p>Mobile blood drives also visit workplaces, universities, and community centers regularly.</p>
+            `;
+          } else if (buttonText.includes('Eligibility')) {
+            content = `
+              <p>To donate blood, you must generally:</p>
+              <ul>
+                <li>Be between 16 and 75 years old</li>
+                <li>Weigh at least 50kg</li>
+                <li>Be in good health</li>
+                <li>Not have donated in the last 56 days (for whole blood)</li>
+              </ul>
+              <p>Some medications, travel history, or medical conditions may affect eligibility. Our staff will conduct a confidential screening before donation.</p>
+            `;
+          } else if (buttonText.includes('Book')) {
+            content = `
+              <p>Booking an appointment ensures:</p>
+              <ul>
+                <li>Minimal waiting time</li>
+                <li>Preferred time slot</li>
+                <li>Preparation for your specific donation type</li>
+                <li>Reminder notifications</li>
+              </ul>
+              <p>Use the booking form above to schedule your donation appointment.</p>
+            `;
+          } else {
+            content = `
+              <p>Detailed information about ${buttonText} for ${serviceTitle}.</p>
+              <p>This service includes comprehensive support and follows international quality standards to ensure patient safety and optimal outcomes.</p>
+              <p>For specific technical details or clinical guidelines, please contact our specialist team.</p>
+            `;
+          }
+          
+          modalServiceContent.innerHTML = content;
+          serviceModal.style.display = 'flex';
+        });
+      });
+      
+      closeServiceModal.addEventListener('click', function() {
+        serviceModal.style.display = 'none';
+      });
+      
+      // Close modal when clicking outside the content
+      serviceModal.addEventListener('click', function(event) {
+        if (event.target === serviceModal) {
+          serviceModal.style.display = 'none';
+        }
+      });
+      
+      // Utility functions
+      function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+      }
+      
+      function clearErrors(formType) {
+        const errorElements = document.querySelectorAll('.error');
+        errorElements.forEach(element => {
+          if (element.id.includes(formType) || formType === 'all') {
+            element.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
